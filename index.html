@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Skate 3 — native · Apple Silicon macOS port</title>
+  <meta name="description" content="A native static recompilation of Skate 3 for Apple Silicon macOS. 4K internal resolution, every effect on, 100+ FPS. Online-play netcode built in the open.">
+  <meta property="og:title" content="Skate 3 — native">
+  <meta property="og:description" content="Not an emulator. Native arm64 Skate 3 on Metal — 4K internal, 100+ FPS.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://uhrichsam4.github.io/skate3-play/">
+  <meta property="og:image" content="https://uhrichsam4.github.io/skate3-play/assets/street.jpg">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="#top"><span class="dot"></span>SKATE<span class="n">3</span><span class="slash">/</span>NATIVE</a>
+  <nav class="nav">
+    <a href="#performance">Performance</a>
+    <a href="#screens">Screens</a>
+    <a href="#online">Online</a>
+    <a href="#run">How to run</a>
+    <a class="ext" href="https://github.com/uhrichsam4/skate3-online" target="_blank" rel="noopener">GitHub ↗</a>
+  </nav>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="hero-art" aria-hidden="true"></div>
+    <div class="hero-in">
+      <p class="kicker">Static recompilation · Apple Silicon · macOS</p>
+      <h1>SKATE&nbsp;3<br><em>native.</em></h1>
+      <p class="lede">Not an emulator. Skate 3 rebuilt as native arm64 code, rendering on Metal at 4K internal resolution — every effect on, 100+&nbsp;FPS.</p>
+      <dl class="stats">
+        <div><dt>Internal render</dt><dd>4K</dd></div>
+        <div><dt>Free skate</dt><dd>103–113 <small>fps</small></dd></div>
+        <div><dt>Anti-aliasing</dt><dd>MSAA&nbsp;2×</dd></div>
+        <div><dt>Emulation layers</dt><dd>0</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker-track">
+      <span>4K internal</span><b>✦</b><span>106 fps</span><b>✦</b><span>dynamic shadows 8192²</span><b>✦</b><span>SSAO</span><b>✦</b><span>bloom</span><b>✦</b><span>sun shafts</span><b>✦</b><span>volumetric haze</span><b>✦</b><span>lightmaps</span><b>✦</b><span>mouse + keyboard</span><b>✦</b><span>no emulation</span><b>✦</b>
+      <span>4K internal</span><b>✦</b><span>106 fps</span><b>✦</b><span>dynamic shadows 8192²</span><b>✦</b><span>SSAO</span><b>✦</b><span>bloom</span><b>✦</b><span>sun shafts</span><b>✦</b><span>volumetric haze</span><b>✦</b><span>lightmaps</span><b>✦</b><span>mouse + keyboard</span><b>✦</b><span>no emulation</span><b>✦</b>
+    </div>
+  </div>
+
+  <section id="performance" class="band">
+    <div class="wrap">
+      <p class="label">01 / Performance</p>
+      <h2>Every effect. <em>On.</em></h2>
+      <p class="prose">The original render pipeline runs on a native Metal backend — dynamic shadows at 8192², SSAO, bloom, volumetric sun shafts and haze, lightmaps, decals and auto-exposure. No cut corners, no hidden presets.</p>
+      <ul class="fx">
+        <li>Dynamic shadows <span>8192²</span></li>
+        <li>Screen-space AO <span>on</span></li>
+        <li>Bloom <span>on</span></li>
+        <li>Volumetric sun shafts <span>on</span></li>
+        <li>Volumetric haze <span>on</span></li>
+        <li>Lightmaps &amp; decals <span>on</span></li>
+        <li>Auto-exposure <span>on</span></li>
+        <li>Keyboard + mouse <span>on</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="screens" class="band screens">
+    <div class="wrap">
+      <p class="label">02 / Screens</p>
+      <h2>Native frames.</h2>
+      <div class="shots">
+        <figure>
+          <img src="assets/street.jpg" alt="Skate 3 running natively on macOS — street session at 106 FPS" loading="lazy">
+          <figcaption><span>Free skate</span><span>4K internal · 106 FPS</span></figcaption>
+        </figure>
+        <figure>
+          <img src="assets/plaza.jpg" alt="Skate 3 running natively on macOS — plaza session at 72 FPS" loading="lazy">
+          <figcaption><span>Plaza · dense foliage &amp; NPCs</span><span>4K internal · 72 FPS</span></figcaption>
+        </figure>
+      </div>
+      <p class="note">Captured in-game on an Apple Silicon Mac, windowed, FPS counter visible. Dense plaza scenes are CPU-bound; the open street holds 100+.</p>
+    </div>
+  </section>
+
+  <section id="online" class="band online">
+    <div class="wrap">
+      <p class="label">03 / Online</p>
+      <h2>Online play, <em>in the open.</em></h2>
+      <p class="prose">A small UDP relay and a documented wire protocol — built in public so players on separate machines can meet in one world. The netcode is open source. The game stays private.</p>
+      <a class="btn" href="https://github.com/uhrichsam4/skate3-online" target="_blank" rel="noopener">github.com/uhrichsam4/skate3-online <span>↗</span></a>
+    </div>
+  </section>
+
+  <section id="run" class="band">
+    <div class="wrap">
+      <p class="label">04 / How it runs</p>
+      <h2>What you need.</h2>
+      <div class="cards">
+        <article>
+          <h3><span>01</span>Hardware</h3>
+          <p>An Apple Silicon Mac (M1–M4). Native Metal renderer, windowed, mouse + keyboard or controller.</p>
+        </article>
+        <article>
+          <h3><span>02</span>Game files</h3>
+          <p>Your own copy of Skate 3 (Xbox 360). No game data is hosted on this site — none ever will be.</p>
+        </article>
+        <article>
+          <h3><span>03</span>Builds</h3>
+          <p>Compiled and shared privately by the author. This page is the project home, not a download mirror.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <p class="foot-brand">SKATE 3 / NATIVE</p>
+    <p>Private fan project. Not affiliated with or endorsed by Electronic Arts. Skate 3 and all game content are © EA. No game code, binaries, or assets are hosted on this site.</p>
+    <p class="foot-links">
+      <a href="https://github.com/uhrichsam4/skate3-online">skate3-online</a>
+      <a href="https://github.com/uhrichsam4">github / uhrichsam4</a>
+    </p>
+  </div>
+</footer>
+</body>
+</html>
